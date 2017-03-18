@@ -13,6 +13,16 @@
         name: 'Dodecahedron',
         price: 2.95,
         description: '. . .',
+        images: [
+            {
+                full: 'dodecahedron-01-full.jpg',
+                thumb: 'dodecahedron-01-thumb.jpg'
+            },
+            {
+                full: 'dodecahedron-02-full.jpg',
+                thumb: 'dodecahedron-02-thumb.jpg'
+            }
+        ],
         canPurchase: true,
         soldOut: true,
         },
@@ -23,4 +33,17 @@
             canPurchase: false,
         }
     ];
+
+    app.controller("PanelController", function(){
+        this.tab = 1;
+
+        this.selectTab = function(setTab){
+            this.tab = setTab;
+        };
+
+        this.isSelected = function(checkTab){
+            return this.tab === checkTab;
+        };
+    });
+
 })();
