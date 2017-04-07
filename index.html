@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="gemStore">
 <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css" />
     <script type="text/javascript" src="lib/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
@@ -21,7 +22,7 @@
 
         <!-- Image Gallery  -->
         <div ng-controller="GalleryController as gallery"  ng-show="product.images.length">
-            <div class="img-wrap">
+            <div class="img-wrap" >
                 <img ng-src="{{product.images[gallery.current]}}" />
             </div>
             <ul class="img-thumbnails clearfix">
